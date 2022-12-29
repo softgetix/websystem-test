@@ -2,7 +2,11 @@
 on: 
   push:
     branches:
+<<<<<<< HEAD
       - master
+=======
+      - dev
+>>>>>>> 8fe8d54438100948cf646a0a73d45d8d9791b42d
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
