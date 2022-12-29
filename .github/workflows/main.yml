@@ -18,4 +18,4 @@ jobs:
         server: ftp.softgetix.com
         username: soft.projects@softgetix.com
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: websystem-test    
+        server-dir: websystem-test/    
