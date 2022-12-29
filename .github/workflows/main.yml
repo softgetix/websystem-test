@@ -2,12 +2,12 @@
 on: 
   push:
     branches:
-      - dev
+      dev
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
     name: 🎉 Deploy
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
