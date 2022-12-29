@@ -16,5 +16,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ftp.softgetix.com
-        username: vivek@softgetix.com
+        username: soft.projects@softgetix.com
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: websystem-test    
