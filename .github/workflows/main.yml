@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ftp.softgetix.com
-        username: soft.projects@softgetix.com
+        server: 200.32.10.146
+        username: user1
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: websystem-test/    
+        server-dir: var/www/websystem-test/    
