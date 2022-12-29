@@ -18,4 +18,4 @@ jobs:
         server: 200.32.10.146
         username: user1
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: var/www/websystem-test/    
+        server-dir: websystem-test/
