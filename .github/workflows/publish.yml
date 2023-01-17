@@ -1,4 +1,4 @@
-name: Publish
+name: Rollback Release
 
 on:
   workflow_dispatch:
@@ -44,4 +44,4 @@ jobs:
           # Using a tag name
           tag: ${{ steps.autotagger.outputs.tagname }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
