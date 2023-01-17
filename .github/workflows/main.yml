@@ -1,21 +1,36 @@
 
 on: 
-  push:
+  workflow_dispatch:
     branches:
       dev
-name: 🚀 Deploy website on push
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+name: 🚀 Deploy workflow_dispatch
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  log-the-inputs:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with:
-        server: 200.32.10.146
-        username: user1
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: websystem-test/
+      - run: |
+          echo "Log level: $LEVEL"
+          echo "Tags: $TAGS"
+          echo "Environment: $ENVIRONMENT"
+        env:
+          LEVEL: ${{ inputs.logLevel }}
+          TAGS: ${{ inputs.tags }}
+          ENVIRONMENT: ${{ inputs.environment }}
