@@ -2,7 +2,7 @@
 on: 
   push:
     branches:
-      - master
+      - testing1
 name: deploy-website-on-push
 jobs:
   web-deploy:
