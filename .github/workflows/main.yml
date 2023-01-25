@@ -2,7 +2,7 @@
 on: 
   push:
     branches:
-      testing
+      - testing
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -15,6 +15,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: 64.202.189.193
+        server: ftp.softgetix.com
         username: vivek@softgetix.com
         password: ${{ secrets.FTP_PASSWORD }}
