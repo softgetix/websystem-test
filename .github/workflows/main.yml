@@ -1,8 +1,9 @@
+
 on: 
   pull_request:
     branches:
       - master
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website on merge
 jobs:
   web-deploy:
     name: 🎉 Deploy
