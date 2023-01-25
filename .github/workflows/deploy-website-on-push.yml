@@ -1,5 +1,6 @@
+name: deploy-website-on-push
 on: 
-  pull_request:
+  push:
     branches:
       - master
 name: 🚀 Deploy website on push
@@ -14,6 +15,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: 64.202.189.193
-        username: vivek2@softgetix.com
+        server: ftp.softgetix.com
+        username: vivek@softgetix.com
         password: ${{ secrets.FTP_PASSWORD }}
